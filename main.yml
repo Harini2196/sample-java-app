@@ -8,10 +8,8 @@
     copy:
       src: target/my-app-1.0-SNAPSHOT.jar
       dest: /opt/tomcat/webapps
-      owner: root
-      group: root
       mode: '0644'
-      remote_src: yes
+     
   - name: restart the tomcat server
     service:
       name: tomcat
