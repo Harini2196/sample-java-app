@@ -1,0 +1,16 @@
+---
+
+- hosts: web
+  become: yes
+- name: copy the jar file to remote server
+  copy:
+    src: /target/*.jar
+    dest: /opt/tomcat/webapps
+    owner: root
+    group: root
+    mode: '0644'
+- name: restart the tomcat server
+  service:
+     name: tomcat
+     state: started
+
