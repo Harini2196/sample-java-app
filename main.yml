@@ -6,7 +6,7 @@
   tasks:
   - name: copy the jar file to remote server
     copy:
-      src: target/*.jar
+      src: target/my-app-1.0-SNAPSHOT.jar
       dest: /opt/tomcat/webapps
       owner: root
       group: root
